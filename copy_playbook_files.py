@@ -7,7 +7,7 @@
 # This script assumes you have used ansible-galaxy to install roles
 # to a "roles" path.
 # The script will walk 1 directory down from "roles" and copy
-# any *.yml files is finds up to the "roles" directory.
+# any *.yml files it finds, up to the "roles" directory.
 # This will allow you to use jinja templating in multiple roles.
 # or even call templates from other roles, using relative paths.
 
