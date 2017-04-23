@@ -2,10 +2,19 @@
 # Email: Mike.petruzelli@capitalone.com
 # All rights reserved
 
+# The intent of this file is to move playbook.yml files
+# Jinja templating can only occur from folders below the playbook location
+# This script assumes you have used ansible-galaxy to install roles
+# to a "roles" path.
+# The script will walk 1 directory down from "roles" and copy
+# any *.yml files is finds up to the "roles" directory.
+# This will allow you to use jinja templating in multiple roles.
+# or even call templates from other roles, using relative paths.
+
 import os
 import shutil
 
-src = "/Users/Mike/personal_github/jinja_testing/roles"
+#src = "path/to/playbook/diectory/roles"
 role_folders = os.listdir(src)
 
 for folder_name in role_folders:
